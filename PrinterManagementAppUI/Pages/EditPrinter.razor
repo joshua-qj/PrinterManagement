@@ -1,0 +1,111 @@
+﻿@page "/printer/add"
+@page "/printer/{Id:int}"
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
+
+@inject IPrinterData printerData
+
+
+@if (loading) {
+        <span>@msg</span>
+}
+else {
+    @if (printer.Id is not 0) {
+        <h3>Edit"@printer.Name"</h3>
+    }
+    else if (printer.Id is 0) {
+        <h3>Create a new Printer</h3>
+    }
+    <EditForm Model="printer" OnValidSubmit="AddOrUpdatePrinter">
+            <DataAnnotationsValidator></DataAnnotationsValidator>
+            <div class="mb-0">
+            <label for="location">Location</label>
+            <InputText id="location" @bind-Value="printer.Location" class="form-control"></InputText>
+            </div>
+            <div class="mb-0">
+            <label for="department">Department</label>
+            <InputTextArea id="department" @bind-Value="printer.Department" class="form-control"></InputTextArea>
+            </div>
+
+            <hr />
+            <hr/>
+        <button type="submit" class="btn btn-primary float-end">@btnText</button>
+        <ValidationSummary></ValidationSummary>
+
+    </EditForm>
+    @if (printer.Id!=0) {
+        <button type="button" class="btn btn-danger float-start" @onclick="DeletePrinter"> Delete Printer !</button>
+    }
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    PrinterModel printer= new PrinterModel();
+    bool loading = true;
+    string btnText = "";  //submit button's text
+    string msg = "Loading...........";
+
+
+    //OnInitialized and OnInitializedAsync are invoked when the component is initialized after 
+    // having received its initial parameters in SetParametersAsync.
+    /*
+     * OnParametersSet or OnParametersSetAsync are called:
+    After the component is initialized in OnInitialized or OnInitializedAsync.
+    When the parent component rerenders and supplies:
+    1.Known or primitive immutable types when at least one parameter has changed.
+    2.Complex-typed parameters. 
+    The framework can't know whether the values of a complex-typed parameter 
+    have mutated internally, 
+    so the framework always treats the parameter set as changed when one or 
+    more complex-typed parameters are present.
+     */
+    protected override async Task OnParametersSetAsync() {
+        if (Id == 0) {
+            //no route parameter
+            btnText = "Create Printer";
+        }
+        else {
+            PrinterModel DbPrinter = await printerData.GetPrinter(Id);
+            if (DbPrinter == null) {
+                msg = $"Printer with Id '{Id}' does not exist!!!!";
+                return;
+            }
+            printer = DbPrinter;
+            printer.Editing = true;
+            btnText = "Update Printer";
+        }
+        loading = false;
+    }
+
+    async void AddOrUpdatePrinter() {
+        if (Id == 0) {
+            var result = await printerData.CreatePrinter(printer); 
+            if (result != null) {
+                NavigationManager.NavigateTo($"/");
+            }
+
+        }
+        else {
+            printer = await printerData.UpdatePrinter(printer) ;
+            if (printer != null) {
+                NavigationManager.NavigateTo($"/", true);
+                //   forceLoad:
+                //     If true, bypasses client-side routing and forces the browser to load the new
+                //     page from the server, whether or not the URI would normally be handled by the
+                //     client-side router.
+            }
+
+        }
+    }
+    async void DeletePrinter() {
+        bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", $"Do you really want to delete '{printer.Name}' ?");
+        if (confirmed) {
+            await printerData.DeletePrinter(printer.Id);
+            NavigationManager.NavigateTo("admin/products");
+        }
+    }
+    
+   
+}
+
