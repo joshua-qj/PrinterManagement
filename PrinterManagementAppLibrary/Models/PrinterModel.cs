@@ -15,19 +15,19 @@ namespace PrinterManagementAppLibrary.Models {
         
         public string IP { get; set; }
         [Required]
-        [MaxLength(15)]
+        [MaxLength(25)]
         public string Model { get; set; }
         [Required]
-        [MaxLength(20)]
+        [MaxLength(40)]
         public string MachineNo { get; set; }
         [Required]
-        [MaxLength(20)]
+        [MaxLength(40)]
         public string SerialNo { get; set; }
         [Required]
-        [MaxLength(30)]
+        [MaxLength(50)]
         public string Location { get; set; }
         [Required]
-        [MaxLength(30)]
+        [MaxLength(50)]
         public string Department { get; set; }
         [Required]
         [MaxLength(10)]
@@ -35,8 +35,9 @@ namespace PrinterManagementAppLibrary.Models {
         [MaxLength(8)]
         public string Status { get; set ; } = "Offline";
         public bool Editing { get; set; } = false;
-        [MaxLength(15)]
-        public Site Site { get; set; } = Site.SpringwoodToyota;
+        [Required]
+        [MaxLength(55)]
+        public int Site { get; set; } = 1;
 
     }
 }
