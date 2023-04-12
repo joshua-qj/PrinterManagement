@@ -5,13 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace PrinterManagementAppLibrary.Models {
-    public enum Site {
-        SpringwoodToyota,
-        SpringwoodMazdaSales,
-        SpringwoodMazdaServices,
-        ClevelandToyota,
-        ClevelandMG,
-        RedlandsMazda,
-        KinstonPD
+    public class Site {
+
+
+        
     }
 }
