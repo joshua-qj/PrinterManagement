@@ -1,9 +1,4 @@
 ﻿using PrinterManagementAppLibrary.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PrinterManagementAppLibrary.DataAccess.SQL
 {
@@ -12,7 +7,14 @@ namespace PrinterManagementAppLibrary.DataAccess.SQL
         Task<PrinterModel> CreatePrinter(PrinterModel printer);
         Task DeletePrinter(int id);
         Task<List<PrinterModel>?> GetAllPrinters();
+        Task<List<PrinterModel>?> GetClevelandMGPrinters();
+        Task<List<PrinterModel>?> GetClevelandToyotaPrinters();
+        Task<List<PrinterModel>?> GetKinstonPDPrinters();
         Task<PrinterModel?> GetPrinter(int id);
+        Task<List<PrinterModel>?> GetRedlandsMazdaPrinters();
+        Task<List<PrinterModel>?> GetSpringwoodMazdaSalesPrinters();
+        Task<List<PrinterModel>?> GetSpringwoodMazdaServicesPrinters();
+        Task<List<PrinterModel>?> GetSpringwoodToyotaPrinters();
         Task<PrinterModel?> UpdatePrinter(PrinterModel printer);
     }
 }

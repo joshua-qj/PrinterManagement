@@ -8,7 +8,13 @@ using System.Threading.Tasks;
 namespace PrinterManagementAppLibrary {
     public static class GlobalConfig {
 
-        public const string PrinterFile = "PrinterFile.csv";
+        public const string SpringwoodToyota = "SpringwoodToyota";
+        public const string SpringwoodMazdaSales = "SpringwoodMazdaSales";
+        public const string SpringwoodMazdaServices = "SpringwoodMazdaServices";
+        public const string ClevelandToyota = "ClevelandToyota";
+        public const string ClevelandMG = "ClevelandMG";
+        public const string RedlandsMazda = "RedlandsMazda";
+        public const string KinstonPD = "KinstonPD";
         public static string CnnString() {
             // return ConfigurationManager.ConnectionStrings[name].ConnectionString;
             return "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=PrintersSQLDB;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PrinterManagementAppLibrary.DataAccess.SQL;
 
@@ -10,9 +11,10 @@ using PrinterManagementAppLibrary.DataAccess.SQL;
 namespace PrinterManagementAppLibrary.Migrations
 {
     [DbContext(typeof(SQLDBContext))]
-    partial class SQLDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230412110037_test")]
+    partial class test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,8 +70,8 @@ namespace PrinterManagementAppLibrary.Migrations
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Site")
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.HasKey("Id");
 

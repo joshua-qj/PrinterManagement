@@ -14,10 +14,10 @@ else {
 }
 
 @code{
-    private List<PrinterModel> printers=new List<PrinterModel>();
+    private List<PrinterModel>? printers=new List<PrinterModel>();
 
     protected override async Task OnInitializedAsync() {
-        printers =  await printerData.GetAllPrinters();
+        printers=  await printerData.GetSpringwoodToyotaPrinters();
 
     }
     protected override async Task OnAfterRenderAsync(bool firstRender) {

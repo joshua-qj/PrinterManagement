@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,11 +33,13 @@ namespace PrinterManagementAppLibrary.Models {
         [Required]
         [MaxLength(10)]
         public string Manufacturer { get; set; }
-        [MaxLength(8)]
+
+        [NotMapped]
         public string Status { get; set ; } = "Offline";
+        [NotMapped]
         public bool Editing { get; set; } = false;
-        [MaxLength(15)]
-        public Site Site { get; set; } = Site.SpringwoodToyota;
+        [MaxLength(25)]
+        public string? Site { get; set; } 
 
     }
 }

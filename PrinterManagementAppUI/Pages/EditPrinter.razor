@@ -62,18 +62,38 @@ else {
 
                         <div class="mb-0">
                     <label for="site">Site</label>
-            <InputText id="site" @bind-Value="printer.Site" class="form-control"></InputText>
+                    <InputSelect id="site" @bind-Value="printer.Site" class="form-control">
+                        
+                        <option value="@GlobalConfig.SpringwoodToyota.ToString()">@GlobalConfig.SpringwoodToyota</option>
+                        <option value="@GlobalConfig.SpringwoodMazdaServices.ToString()">@GlobalConfig.SpringwoodMazdaServices</option>
+                        <option value="@GlobalConfig.SpringwoodMazdaSales.ToString()">@GlobalConfig.SpringwoodMazdaSales</option>
+
+                        <option value="@GlobalConfig.ClevelandMG.ToString()">@GlobalConfig.ClevelandMG</option>
+                        <option value="@GlobalConfig.ClevelandToyota.ToString()">@GlobalConfig.ClevelandToyota</option>
+                        <option value="@GlobalConfig.RedlandsMazda.ToString()">@GlobalConfig.RedlandsMazda</option>
+                        <option value="@GlobalConfig.KinstonPD.ToString()">@GlobalConfig.KinstonPD</option>
+                    </InputSelect>
+           
             </div>
             </div>
             </div>
             <hr />
             <hr/>
-        <button type="submit" class="btn btn-primary float-end">@btnText</button>
+        <button type="submit" class="btn btn-primary float-end">
+            @if (printer.Id != 0) {
+                <i class="oi oi-pencil"></i>
+            }else {
+                <i class="oi oi-plus"></i>
+            }
+            @btnText
+        </button>
         <ValidationSummary></ValidationSummary>
 
     </EditForm>
     @if (printer.Id!=0) {
-        <button type="button" class="btn btn-danger float-start" @onclick="DeletePrinter"> Delete Printer !</button>
+        <button type="button" class="btn btn-danger float-start" @onclick="DeletePrinter">
+            <i class="oi oi-trash"></i>Delete
+        </button>
     }
 }
 
@@ -102,7 +122,7 @@ else {
     protected override async Task OnParametersSetAsync() {
         if (Id == 0) {
             //no route parameter
-            btnText = "Create Printer";
+            btnText = "Create";
         }
         else {
             PrinterModel DbPrinter = await printerData.GetPrinter(Id);
@@ -112,7 +132,7 @@ else {
             }
             printer = DbPrinter;
             printer.Editing = true;
-            btnText = "Update Printer";
+            btnText = "Update";
         }
         loading = false;
     }
@@ -141,7 +161,7 @@ else {
         bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", $"Do you really want to delete '{printer.Name}' ?");
         if (confirmed) {
             await printerData.DeletePrinter(printer.Id);
-            NavigationManager.NavigateTo("admin/products");
+            NavigationManager.NavigateTo("/");
         }
     }
     
