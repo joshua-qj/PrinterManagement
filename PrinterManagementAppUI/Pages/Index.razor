@@ -31,17 +31,36 @@ else {
     public async Task PingPrinters(List<PrinterModel> printers) {
 
         Ping pinger = new();
-        if (printers is not null ) {
-            foreach (var printer in printers) {
-                PingReply reply = await pinger.SendPingAsync(printer.IP);
-                if (reply is { Status: IPStatus.Success }) {
-                    printer.Status = "Online";
-                }
-                else {
-                    printer.Status = "Offline";
+        try {
+            if (printers is not null) {
+                foreach (var printer in printers) {
+                    PingReply reply = await pinger.SendPingAsync(printer.IP);
+                    if (reply is { Status: IPStatus.Success }) {
+                        printer.Status = "Online";
+                    }
+                    else {
+                        printer.Status = "Offline";
+                    }
                 }
             }
         }
+        catch (Exception ) {
+
+            foreach (var printer in printers) {
+                printer.Status = "Offline";
+            }
+        }
+        //if (printers is not null ) {
+        //    foreach (var printer in printers) {
+        //        PingReply reply = await pinger.SendPingAsync(printer.IP);
+        //        if (reply is { Status: IPStatus.Success }) {
+        //            printer.Status = "Online";
+        //        }
+        //        else {
+        //            printer.Status = "Offline";
+        //        }
+        //    }
+        //}
     }
 
         //try {
