@@ -15,6 +15,7 @@ namespace PrinterManagementAppLibrary.DataAccess.SQL
         Task<List<PrinterModel>?> GetSpringwoodMazdaSalesPrinters();
         Task<List<PrinterModel>?> GetSpringwoodMazdaServicesPrinters();
         Task<List<PrinterModel>?> GetSpringwoodToyotaPrinters();
+        Task PingPrinters(List<PrinterModel> printers);
         Task<PrinterModel?> UpdatePrinter(PrinterModel printer);
     }
 }
