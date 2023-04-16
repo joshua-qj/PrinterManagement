@@ -22,24 +22,30 @@
                         @if (member.MemberType == MemberTypes.Property &&
                        !ColumsToExclude.Contains(member.Name, StringComparison.OrdinalIgnoreCase)) {
                             <td>
-                                @if (member.Name=="IP") {                                    
+                                @if (member.Name == "IP") {
                                     <a href="https://@item.GetType().GetProperty(member.Name).GetValue(item)">@item.GetType().GetProperty(member.Name).GetValue(item)</a>
-                                                                
-                                }else {
+
+                                }
+                                else
+                                @if (member.Name == "Status") {
+
+                                    <span class=@StatusBadge(item.GetType().GetProperty(member.Name).GetValue(item).ToString())>@item.GetType().GetProperty(member.Name).GetValue(item)</span>
+                                }
+                                else {
                                     @item.GetType().GetProperty(member.Name).GetValue(item)
-                                }                      
+                                }
                             </td>
                         }
                     }
                     <td>
-@*                                           <AuthorizeView Roles="Admin">
-                       <Authorized>*@
+                        @*                                           <AuthorizeView Roles="Admin">
+                <Authorized>*@
 
                         <a href="@($"/printer/{item.GetType().GetProperty("Id").GetValue(item)}")" class="btn btn-primary btn-sm">
-                            <i class="oi oi-pencil"></i> 
-                            </a>
-@*                        </Authorized>
-                 </AuthorizeView>*@
+                            <i class="oi oi-pencil"></i>
+                        </a>
+                        @*                        </Authorized>
+                </AuthorizeView>*@
                     </td>
                 </tr>
             }
@@ -60,6 +66,7 @@
 
     private List<PrinterModel>? printers;
 
+    public string? StatusCssClass { get; set; }
     protected override void OnParametersSet() {
         base.OnParametersSet();
         if (Items != null && Items.Count > 0) {
@@ -69,10 +76,10 @@
         }
     }
 
-    public override bool Equals(object obj) {
-        return obj is PrinterList<TItem> list &&
-               EqualityComparer<MemberInfo[]>.Default.Equals(memberInfo, list.memberInfo);
-    }
+    //public override bool Equals(object obj) {
+    //    return obj is PrinterList<TItem> list &&
+    //           EqualityComparer<MemberInfo[]>.Default.Equals(memberInfo, list.memberInfo);
+    //}
 
     protected override async Task OnInitializedAsync() {
         //var results = await
@@ -80,7 +87,16 @@
 
     }
 
-  
+    protected string StatusBadge(string status) {
+        if (status.Equals("Online")) {
+            StatusCssClass = "badge bg-success";
+        }else {
+            StatusCssClass = "badge  bg-danger";
+        }       
+        return StatusCssClass;
+    }
+
+
 
 
 }
