@@ -16,29 +16,29 @@ namespace PrinterManagementAppLibrary.Models {
         
         public string IP { get; set; }
         [Required]
-        [MaxLength(15)]
+        [MaxLength(35)]
         public string Model { get; set; }
         [Required]
-        [MaxLength(20)]
+        [MaxLength(50)]
         public string MachineNo { get; set; }
         [Required]
-        [MaxLength(20)]
+        [MaxLength(50)]
         public string SerialNo { get; set; }
         [Required]
-        [MaxLength(30)]
+        [MaxLength(90)]
         public string Location { get; set; }
         [Required]
-        [MaxLength(30)]
+        [MaxLength(90)]
         public string Department { get; set; }
         [Required]
-        [MaxLength(10)]
+        [MaxLength(20)]
         public string Manufacturer { get; set; }
 
         [NotMapped]
         public string Status { get; set ; } = "Offline";
         [NotMapped]
         public bool Editing { get; set; } = false;
-        [MaxLength(25)]
+        [MaxLength(35)]
         public string? Site { get; set; } 
 
     }

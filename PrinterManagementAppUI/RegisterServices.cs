@@ -12,7 +12,7 @@ namespace PrinterManagementAppUI
             builder.Services.AddServerSideBlazor();
 
             builder.Services.AddDbContext<SQLDBContext>(opt =>
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnection")));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnection")).EnableSensitiveDataLogging());
 
             builder.Services.AddScoped<IPrinterData, SQLPrinterData>();
         }

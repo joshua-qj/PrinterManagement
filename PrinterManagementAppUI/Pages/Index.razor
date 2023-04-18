@@ -22,43 +22,17 @@ else {
     }
     protected override async Task OnAfterRenderAsync(bool firstRender) {
         //
-        await PingPrinters(printers);
+        await printerData.PingPrinters(printers);
         StateHasChanged();
         //return base.OnAfterRenderAsync(firstRender);
     }
 
 
-    public async Task PingPrinters(List<PrinterModel> printers) {
 
-        Ping pinger = new();
-        if (printers is not null ) {
-            foreach (var printer in printers) {
-                PingReply reply = await pinger.SendPingAsync(printer.IP);
-                if (reply is { Status: IPStatus.Success }) {
-                    printer.Status = "Online";
-                }
-                else {
-                    printer.Status = "Offline";
-                }
-            }
-        }
+
     }
 
-        //try {
-        //    pinger = new Ping();
-        //    PingReply reply = pinger.Send(nameOrAddress);
-        //    pingable = reply.Status == IPStatus.Success;
-        //}
-        //catch (PingException) {
-        //    // Discard PingExceptions and return false;
-        //}
-        //finally {
-        //    if (pinger != null) {
-        //        pinger.Dispose();
-        //    }
-        //}
 
-        //return pingable;
 
-}
+
 

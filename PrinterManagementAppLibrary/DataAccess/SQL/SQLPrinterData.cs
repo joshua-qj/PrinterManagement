@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PrinterManagementAppLibrary.Models;
-
-
+using System.Net.NetworkInformation;
 
 namespace PrinterManagementAppLibrary.DataAccess.SQL {
     public class SQLPrinterData : IPrinterData {
@@ -81,5 +80,30 @@ namespace PrinterManagementAppLibrary.DataAccess.SQL {
             await _context.SaveChangesAsync();
             return printer;
         }
+
+        public async Task PingPrinters(List<PrinterModel> printers) {
+
+            Ping pinger = new();
+            try {
+                if (printers is not null) {
+                    foreach (var printer in printers) {
+                        PingReply reply = await pinger.SendPingAsync(printer.IP);
+                        if (reply is { Status: IPStatus.Success }) {
+                            printer.Status = "Online";
+                        }
+                        else {
+                            printer.Status = "Offline";
+                        }
+                    }
+                }
+            }
+            catch (Exception) {
+
+                foreach (var printer in printers) {
+                    printer.Status = "Offline";
+                }
+            }
+        }
+
     }
 }
