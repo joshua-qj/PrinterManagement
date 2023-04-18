@@ -1,23 +1,23 @@
-﻿@page "/"
+﻿@page "/KinstonPD"
 @using System.Net.NetworkInformation
 @inject IPrinterData printerData
 
-<PageTitle>Springwood Toyota Printer</PageTitle>
+<PageTitle>Kinston PD Printer</PageTitle>
 
 
 @if (printers is not null) {
-    <PrinterList Items= "printers" ColumsToExclude="Id,Editing,Site"></PrinterList>
+    <PrinterList Items="printers" ColumsToExclude="Id,Editing,Site"></PrinterList>
 
 }
 else {
-      <h1>"Loading"</h1>
+    <h1>"Loading"</h1>
 }
 
-@code{
-    private List<PrinterModel>? printers=new List<PrinterModel>();
+@code {
+    private List<PrinterModel>? printers = new List<PrinterModel>();
 
     protected override async Task OnInitializedAsync() {
-        printers=  await printerData.GetSpringwoodToyotaPrinters();
+        printers = await printerData.GetKinstonPDPrinters();
 
     }
     protected override async Task OnAfterRenderAsync(bool firstRender) {
@@ -31,7 +31,7 @@ else {
     public async Task PingPrinters(List<PrinterModel> printers) {
 
         Ping pinger = new();
-        if (printers is not null ) {
+        if (printers is not null) {
             foreach (var printer in printers) {
                 PingReply reply = await pinger.SendPingAsync(printer.IP);
                 if (reply is { Status: IPStatus.Success }) {
@@ -43,22 +43,4 @@ else {
             }
         }
     }
-
-        //try {
-        //    pinger = new Ping();
-        //    PingReply reply = pinger.Send(nameOrAddress);
-        //    pingable = reply.Status == IPStatus.Success;
-        //}
-        //catch (PingException) {
-        //    // Discard PingExceptions and return false;
-        //}
-        //finally {
-        //    if (pinger != null) {
-        //        pinger.Dispose();
-        //    }
-        //}
-
-        //return pingable;
-
 }
-

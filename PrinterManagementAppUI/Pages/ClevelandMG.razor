@@ -1,8 +1,8 @@
-﻿@page "/"
+﻿@page "/ClevelandMG"
 @using System.Net.NetworkInformation
 @inject IPrinterData printerData
 
-<PageTitle>Springwood Toyota Printer</PageTitle>
+<PageTitle>Cleveland MG Printer</PageTitle>
 
 
 @if (printers is not null) {
@@ -17,7 +17,7 @@ else {
     private List<PrinterModel>? printers=new List<PrinterModel>();
 
     protected override async Task OnInitializedAsync() {
-        printers=  await printerData.GetSpringwoodToyotaPrinters();
+        printers=  await printerData.GetClevelandMGPrinters();
 
     }
     protected override async Task OnAfterRenderAsync(bool firstRender) {
@@ -44,21 +44,4 @@ else {
         }
     }
 
-        //try {
-        //    pinger = new Ping();
-        //    PingReply reply = pinger.Send(nameOrAddress);
-        //    pingable = reply.Status == IPStatus.Success;
-        //}
-        //catch (PingException) {
-        //    // Discard PingExceptions and return false;
-        //}
-        //finally {
-        //    if (pinger != null) {
-        //        pinger.Dispose();
-        //    }
-        //}
-
-        //return pingable;
-
 }
-
