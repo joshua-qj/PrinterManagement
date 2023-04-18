@@ -1,5 +1,47 @@
-﻿<h3>RedlandsMazda</h3>
+@page "/RedlandsMazda"
+@using System.Net.NetworkInformation
+@inject IPrinterData printerData
+
+<PageTitle>Redlands Mazda Printer</PageTitle>
+
+
+@if (printers is not null) {
+    <PrinterList Items="printers" ColumsToExclude="Id,Editing,Site"></PrinterList>
+
+}
+else {
+    <h1>"Loading"</h1>
+}
 
 @code {
+    private List<PrinterModel>? printers = new List<PrinterModel>();
+
+    protected override async Task OnInitializedAsync() {
+        printers = await printerData.GetRedlandsMazdaPrinters();
+
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender) {
+        //
+        await PingPrinters(printers);
+        StateHasChanged();
+        //return base.OnAfterRenderAsync(firstRender);
+    }
+
+
+    public async Task PingPrinters(List<PrinterModel> printers) {
+
+        Ping pinger = new();
+        if (printers is not null) {
+            foreach (var printer in printers) {
+                PingReply reply = await pinger.SendPingAsync(printer.IP);
+                if (reply is { Status: IPStatus.Success }) {
+                    printer.Status = "Online";
+                }
+                else {
+                    printer.Status = "Offline";
+                }
+            }
+        }
+    }
 
 }

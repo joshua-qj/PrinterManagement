@@ -16,6 +16,10 @@ if (!app.Environment.IsDevelopment()) {
     app.UseHsts();
 }
 
+if (builder.Environment.IsProduction()) {
+    builder.WebHost.UseStaticWebAssets();
+}
+
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
