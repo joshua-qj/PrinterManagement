@@ -3,7 +3,7 @@
 @using System.Reflection
 
 @if (memberInfo != null && memberInfo.Length > 0) {
-    <table class="table">
+    <table class="table table-striped">
         <thead>
             <tr>
                 @foreach (var member in memberInfo) {
@@ -22,10 +22,17 @@
                         @if (member.MemberType == MemberTypes.Property &&
                        !ColumsToExclude.Contains(member.Name, StringComparison.OrdinalIgnoreCase)) {
                             <td>
-                                @if (member.Name=="IP") {                                    
-                                    <a href="https://@item.GetType().GetProperty(member.Name).GetValue(item)">@item.GetType().GetProperty(member.Name).GetValue(item)</a>
+                                @if (member.Name=="IP") {
+                                    <a target="_blank" href="https://@item.GetType().GetProperty(member.Name).GetValue(item)">@item.GetType().GetProperty(member.Name).GetValue(item)</a>
                                                                 
-                                }else {
+                                }
+                                else
+                                @if (member.Name == "Status") {
+
+                                    <span class=@StatusBadge(item.GetType().GetProperty(member.Name).GetValue(item).ToString())>@item.GetType().GetProperty(member.Name).GetValue(item)</span>
+                                }
+                                
+                                else {
                                     @item.GetType().GetProperty(member.Name).GetValue(item)
                                 }                      
                             </td>
@@ -58,8 +65,7 @@
 
     MemberInfo[] memberInfo;
 
-    private List<PrinterModel>? printers;
-
+    public string? StatusCssClass { get; set; }
     protected override void OnParametersSet() {
         base.OnParametersSet();
         if (Items != null && Items.Count > 0) {
@@ -78,6 +84,16 @@
         //var results = await
         //this.printers = results.ToList();
 
+    }
+
+    protected string StatusBadge(string status) {
+        if (status.Equals("Online")) {
+            StatusCssClass = "badge bg-success";
+        }
+        else {
+            StatusCssClass = "badge  bg-danger";
+        }
+        return StatusCssClass;
     }
 
   
