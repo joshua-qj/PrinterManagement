@@ -22,8 +22,8 @@
                         @if (member.MemberType == MemberTypes.Property &&
                        !ColumsToExclude.Contains(member.Name, StringComparison.OrdinalIgnoreCase)) {
                             <td>
-                                @if (member.Name=="IP") {                                    
-                                    <a href="https://@item.GetType().GetProperty(member.Name).GetValue(item)">@item.GetType().GetProperty(member.Name).GetValue(item)</a>
+                                @if (member.Name=="IP") {
+                                    <a target="_blank" href="https://@item.GetType().GetProperty(member.Name).GetValue(item)">@item.GetType().GetProperty(member.Name).GetValue(item)</a>
                                                                 
                                 }else {
                                     @item.GetType().GetProperty(member.Name).GetValue(item)
@@ -88,15 +88,7 @@
         return StatusCssClass;
     }
 
-    protected string StatusBadge(string status) {
-        if (status.Equals("Online")) {
-            StatusCssClass = "badge bg-success";
-        }
-        else {
-            StatusCssClass = "badge  bg-danger";
-        }
-        return StatusCssClass;
-    }
+
 
   
 
