@@ -38,7 +38,7 @@ namespace PrinterManagementAppLibrary.Models {
         public string Status { get; set ; } = "Offline";
         [NotMapped]
         public bool Editing { get; set; } = false;
-        [MaxLength(25)]
+        [MaxLength(35)]
         public string? Site { get; set; } 
 
     }

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PrinterManagementAppLibrary.DataAccess.SQL;
 
@@ -10,9 +11,10 @@ using PrinterManagementAppLibrary.DataAccess.SQL;
 namespace PrinterManagementAppLibrary.Migrations
 {
     [DbContext(typeof(SQLDBContext))]
-    partial class SQLDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230414065045_seeddata2")]
+    partial class seeddata2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,8 +33,8 @@ namespace PrinterManagementAppLibrary.Migrations
 
                     b.Property<string>("Department")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(90)
+                        .HasColumnType("nvarchar(90)");
 
                     b.Property<string>("IP")
                         .IsRequired()
@@ -40,8 +42,8 @@ namespace PrinterManagementAppLibrary.Migrations
 
                     b.Property<string>("Location")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(90)
+                        .HasColumnType("nvarchar(90)");
 
                     b.Property<string>("MachineNo")
                         .IsRequired()
@@ -64,8 +66,8 @@ namespace PrinterManagementAppLibrary.Migrations
 
                     b.Property<string>("SerialNo")
                         .IsRequired()
-                        .HasMaxLength(40)
-                        .HasColumnType("nvarchar(40)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Site")
                         .HasMaxLength(35)
