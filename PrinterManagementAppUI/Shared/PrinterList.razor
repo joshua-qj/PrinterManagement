@@ -88,7 +88,15 @@
         return StatusCssClass;
     }
 
-
+    protected string StatusBadge(string status) {
+        if (status.Equals("Online")) {
+            StatusCssClass = "badge bg-success";
+        }
+        else {
+            StatusCssClass = "badge  bg-danger";
+        }
+        return StatusCssClass;
+    }
 
   
 
