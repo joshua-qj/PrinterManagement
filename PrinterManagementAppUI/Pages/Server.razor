@@ -1,0 +1,14 @@
+﻿@page "/server"
+@using System.Diagnostics
+
+<button @onclick="@ClickAction">mstsc</button>
+
+@code {
+
+    private void ClickAction() {
+        string ipAddressOrName = "172.16.11.141";
+        string arguments = $"/v:{ipAddressOrName}";
+        Process.Start("mstsc.exe", arguments);
+    }
+
+} 
