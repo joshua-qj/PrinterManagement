@@ -6,8 +6,9 @@
 
 
 @if (printers is not null) {
+        <CascadingValue Name="ParentPath" Value="@parentPath">
     <PrinterList Items="printers" ColumsToExclude="Id,Editing,Site"></PrinterList>
-
+    </CascadingValue>
 }
 else {
     <h1>"Loading"</h1>
@@ -15,7 +16,7 @@ else {
 
 @code {
     private List<PrinterModel>? printers = new List<PrinterModel>();
-
+    private string parentPath { get; set; } = "RedlandsMazda";
     protected override async Task OnInitializedAsync() {
         printers = await printerData.GetRedlandsMazdaPrinters();
 

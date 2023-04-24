@@ -1,4 +1,5 @@
 ﻿@page "/"
+@page "/SpringwoodToyota"
 @using System.Net.NetworkInformation
 @inject IPrinterData printerData
 
@@ -6,8 +7,9 @@
 
 <h1>Springwood Toyota Printer</h1>
 @if (printers is not null) {
+    <CascadingValue Name="ParentPath" Value="@parentPath">
     <PrinterList Items= "printers" ColumsToExclude="Id,Editing,Site"></PrinterList>
-
+        </CascadingValue>
 }
 else {
       <h1>"Loading"</h1>
@@ -15,7 +17,7 @@ else {
 
 @code{
     private List<PrinterModel>? printers=new List<PrinterModel>();
-
+    private string parentPath { get; set; } = "SpringwoodToyota";
     protected override async Task OnInitializedAsync() {
         printers=  await printerData.GetSpringwoodToyotaPrinters();
 

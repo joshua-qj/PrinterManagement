@@ -1,5 +1,5 @@
-﻿@page "/printer/add"
-@page "/printer/{Id:int}"
+﻿@page "/printer/{ParentPath}/add"
+@page "/printer/{ParentPath}/{Id:int}"
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JSRuntime
 
@@ -57,11 +57,11 @@ else {
 
                 <div class="mb-0">
                     <label for="manufacturer">Manufacturer</label>
-                    <InputTextArea id="manufacturer" @bind-Value="printer.Manufacturer" class="form-control"></InputTextArea>
+                    <InputText id="manufacturer" @bind-Value="printer.Manufacturer" class="form-control"></InputText>
                 </div>
 
                         <div class="mb-0">
-                    <label for="site">Site</label>
+@*                    <label for="site">Site</label>
                     <InputSelect id="site" @bind-Value="printer.Site" class="form-control">
                         
                         <option value="@GlobalConfig.SpringwoodToyota.ToString()">@GlobalConfig.SpringwoodToyota</option>
@@ -72,7 +72,7 @@ else {
                         <option value="@GlobalConfig.ClevelandToyota.ToString()">@GlobalConfig.ClevelandToyota</option>
                         <option value="@GlobalConfig.RedlandsMazda.ToString()">@GlobalConfig.RedlandsMazda</option>
                         <option value="@GlobalConfig.KinstonPD.ToString()">@GlobalConfig.KinstonPD</option>
-                    </InputSelect>
+                    </InputSelect>*@
            
             </div>
             </div>
@@ -101,6 +101,8 @@ else {
 @code {
     [Parameter]
     public int Id { get; set; }
+    [Parameter]
+    public string ParentPath { get; set; }
     PrinterModel printer= new PrinterModel();
     bool loading = true;
     string btnText = "";  //submit button's text
@@ -109,7 +111,7 @@ else {
 
     //OnInitialized and OnInitializedAsync are invoked when the component is initialized after 
     // having received its initial parameters in SetParametersAsync.
-    /*
+     /*
      * OnParametersSet or OnParametersSetAsync are called:
     After the component is initialized in OnInitialized or OnInitializedAsync.
     When the parent component rerenders and supplies:
@@ -119,7 +121,7 @@ else {
     have mutated internally, 
     so the framework always treats the parameter set as changed when one or 
     more complex-typed parameters are present.
-     */
+    */
     protected override async Task OnParametersSetAsync() {
         if (Id == 0) {
             //no route parameter
@@ -140,16 +142,19 @@ else {
 
     async void AddOrUpdatePrinter() {
         if (Id == 0) {
+            printer.Site = ParentPath;
             var result = await printerData.CreatePrinter(printer); 
             if (result != null) {
-                NavigationManager.NavigateTo($"/");
+                NavigationManager.NavigateTo($"/{ParentPath}");
             }
 
         }
         else {
+            printer.Site = ParentPath;
             printer = await printerData.UpdatePrinter(printer) ;
+            
             if (printer != null) {
-                NavigationManager.NavigateTo($"/", true);
+                NavigationManager.NavigateTo($"/{ParentPath}", true);
                 //   forceLoad:
                 //     If true, bypasses client-side routing and forces the browser to load the new
                 //     page from the server, whether or not the URI would normally be handled by the
@@ -162,7 +167,8 @@ else {
         bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", $"Do you really want to delete '{printer.Name}' ?");
         if (confirmed) {
             await printerData.DeletePrinter(printer.Id);
-            NavigationManager.NavigateTo("/");
+            NavigationManager.NavigateTo($"/{ ParentPath}");
+           
         }
     }
     
