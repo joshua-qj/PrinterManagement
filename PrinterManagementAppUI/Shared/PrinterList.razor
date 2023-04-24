@@ -35,7 +35,7 @@
                         @*                                           <AuthorizeView Roles="Admin">
                 <Authorized>*@
 
-                        <a href="@($"/printer/{item.GetType().GetProperty("Id").GetValue(item)}")" class="btn btn-primary btn-sm">
+                        <a href="@($"/printer/{parentPath}/{item.GetType().GetProperty("Id").GetValue(item)}")" class="btn btn-primary btn-sm">
                             <i class="oi oi-pencil"></i>
                         </a>
                         @*                        </Authorized>
@@ -45,7 +45,7 @@
             }
         </tbody>
     </table>
-    <a style="float: right; " href="@("/printer/add")" class="margin-right: 0;btn btn-primary btn-sm">
+    <a style="float: right; " href="@($"/printer/{parentPath}/add")" class="margin-right: 0;btn btn-primary btn-sm">
         <i class="oi oi-plus"></i> Add
     </a>
 }
@@ -55,10 +55,13 @@
     public List<TItem> Items { get; set; }
     [Parameter]
     public string ColumsToExclude { get; set; }
+    [CascadingParameter(Name = "ParentPath")]
+    private string parentPath { get; set; }
+
 
     MemberInfo[] memberInfo;
 
-    public string? StatusCssClass { get; set; }
+    private string? StatusCssClass { get; set; }
     protected override void OnParametersSet() {
         base.OnParametersSet();
         if (Items != null && Items.Count > 0) {
@@ -68,16 +71,7 @@
         }
     }
 
-    //public override bool Equals(object obj) {
-    //    return obj is PrinterList<TItem> list &&
-    //           EqualityComparer<MemberInfo[]>.Default.Equals(memberInfo, list.memberInfo);
-    //}
 
-    protected override async Task OnInitializedAsync() {
-        //var results = await
-        //this.printers = results.ToList();
-
-    }
 
     protected string StatusBadge(string status) {
         if (status.Equals("Online")) {
@@ -88,15 +82,6 @@
         return StatusCssClass;
     }
 
-    protected string StatusBadge(string status) {
-        if (status.Equals("Online")) {
-            StatusCssClass = "badge bg-success";
-        }
-        else {
-            StatusCssClass = "badge  bg-danger";
-        }
-        return StatusCssClass;
-    }
 
   
 

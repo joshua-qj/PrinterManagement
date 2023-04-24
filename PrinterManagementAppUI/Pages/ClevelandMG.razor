@@ -6,14 +6,16 @@
 
 
 @if (printers is not null) {
+        <CascadingValue Name="ParentPath" Value="@parentPath">
     <PrinterList Items= "printers" ColumsToExclude="Id,Editing,Site"></PrinterList>
-
+    </CascadingValue>
 }
 else {
       <h1>"Loading"</h1>
 }
 
 @code{
+      private string parentPath { get; set; } = "ClevelandMG";
     private List<PrinterModel>? printers=new List<PrinterModel>();
 
     protected override async Task OnInitializedAsync() {
