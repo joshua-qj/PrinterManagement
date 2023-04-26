@@ -24,8 +24,13 @@
                             <td>
                                 @if (member.Name=="IP") {
                                     <a target="_blank" href="https://@item.GetType().GetProperty(member.Name).GetValue(item)">@item.GetType().GetProperty(member.Name).GetValue(item)</a>
-                                                                
-                                }else {
+
+                                }
+                                else @if (member.Name == "Status") {
+
+                                    <span class=@StatusBadge(item.GetType().GetProperty(member.Name).GetValue(item).ToString())>@item.GetType().GetProperty(member.Name).GetValue(item)</span>
+                                }
+                                else {
                                     @item.GetType().GetProperty(member.Name).GetValue(item)
                                 }
                             </td>
