@@ -4,7 +4,7 @@ using PrinterManagementAppUI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container. seprate to  ConfigureService file
 
 
 builder.ConfigureService();
