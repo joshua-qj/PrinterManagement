@@ -40,7 +40,7 @@ namespace PrinterManagementAppLibrary.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Location")
+                    b.Property<string>("Site")
                         .IsRequired()
                         .HasMaxLength(90)
                         .HasColumnType("nvarchar(90)");

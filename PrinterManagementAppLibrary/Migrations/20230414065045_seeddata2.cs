@@ -31,7 +31,7 @@ namespace PrinterManagementAppLibrary.Migrations
 
             migrationBuilder.InsertData(
                 table: "Printers",
-                columns: new[] { "Id", "Department", "IP", "Location", "MachineNo", "Manufacturer", "Model", "Name", "SerialNo", "Site" },
+                columns: new[] { "Id", "Department", "IP", "Site", "MachineNo", "Manufacturer", "Model", "Name", "SerialNo", "Site" },
                 values: new object[,]
                 {
                     { 3, "Admin", "172.16.1.120", "SWT Accounts Pay (Sarah)", "31447", "HP", "E60165", "ACCPAY", "CNMKM6R9ZV", "SpringwoodToyota" },
@@ -80,7 +80,7 @@ namespace PrinterManagementAppLibrary.Migrations
 
             migrationBuilder.InsertData(
                 table: "Printers",
-                columns: new[] { "Id", "Department", "IP", "Location", "MachineNo", "Manufacturer", "Model", "Name", "SerialNo", "Site" },
+                columns: new[] { "Id", "Department", "IP", "Site", "MachineNo", "Manufacturer", "Model", "Name", "SerialNo", "Site" },
                 values: new object[,]
                 {
                     { 45, "Parts SWT", "172.16.1.210", "SWT Parts Warehouse (Middle)", "####", "Zebra", "ZT410", "####", "18J155301053", "SpringwoodToyota" },
@@ -129,7 +129,7 @@ namespace PrinterManagementAppLibrary.Migrations
 
             migrationBuilder.InsertData(
                 table: "Printers",
-                columns: new[] { "Id", "Department", "IP", "Location", "MachineNo", "Manufacturer", "Model", "Name", "SerialNo", "Site" },
+                columns: new[] { "Id", "Department", "IP", "Site", "MachineNo", "Manufacturer", "Model", "Name", "SerialNo", "Site" },
                 values: new object[,]
                 {
                     { 87, "New Car RM", "172.16.5.201", "RM New Cars (beside Peter's room)", "31642", "HP", "E87650", "RMRECEPTION", "CNB8K6M0G1", "RedlandsMazda" },
