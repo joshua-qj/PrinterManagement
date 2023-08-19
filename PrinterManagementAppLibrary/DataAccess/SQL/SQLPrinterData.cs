@@ -27,32 +27,21 @@ namespace PrinterManagementAppLibrary.DataAccess.SQL {
             var result = await _context.Printers.ToListAsync();
             return result;
         }
-        public async Task<List<PrinterModel>?> GetSpringwoodToyotaPrinters() {
-            var result = await _context.Printers.Where(p => p.Site == GlobalConfig.SpringwoodToyota).ToListAsync();
+        public async Task<List<PrinterModel>?> GetSpringwoodPrinters() {
+            var result = await _context.Printers.Where(p => p.SiteId == 1).ToListAsync();
             return result;
         }
-        public async Task<List<PrinterModel>?> GetSpringwoodMazdaSalesPrinters() {
-            var result = await _context.Printers.Where(p => p.Site == GlobalConfig.SpringwoodMazdaSales).ToListAsync();
+
+        public async Task<List<PrinterModel>?> GetClevelandPrinters() {
+            var result = await _context.Printers.Where(p => p.SiteId == 2).ToListAsync();
             return result;
         }
-        public async Task<List<PrinterModel>?> GetSpringwoodMazdaServicesPrinters() {
-            var result = await _context.Printers.Where(p => p.Site == GlobalConfig.SpringwoodMazdaServices).ToListAsync();
+        public async Task<List<PrinterModel>?> GetRedlandsPrinters() {
+            var result = await _context.Printers.Where(p => p.SiteId == 3).ToListAsync();
             return result;
         }
-        public async Task<List<PrinterModel>?> GetClevelandToyotaPrinters() {
-            var result = await _context.Printers.Where(p => p.Site == GlobalConfig.ClevelandToyota).ToListAsync();
-            return result;
-        }
-        public async Task<List<PrinterModel>?> GetClevelandMGPrinters() {
-            var result = await _context.Printers.Where(p => p.Site == GlobalConfig.ClevelandMG).ToListAsync();
-            return result;
-        }
-        public async Task<List<PrinterModel>?> GetRedlandsMazdaPrinters() {
-            var result = await _context.Printers.Where(p => p.Site == GlobalConfig.RedlandsMazda).ToListAsync();
-            return result;
-        }
-        public async Task<List<PrinterModel>?> GetKinstonPDPrinters() {
-            var result = await _context.Printers.Where(p => p.Site == GlobalConfig.KinstonPD).ToListAsync();
+        public async Task<List<PrinterModel>?> GetKinstonPrinters() {
+            var result = await _context.Printers.Where(p => p.SiteId == 4).ToListAsync();
             return result;
         }
 

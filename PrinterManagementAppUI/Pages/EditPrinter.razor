@@ -142,7 +142,7 @@ else {
 
     async void AddOrUpdatePrinter() {
         if (Id == 0) {
-            printer.Site = ParentPath;
+            printer.SiteId =int.Parse(ParentPath);
             var result = await printerData.CreatePrinter(printer); 
             if (result != null) {
                 NavigationManager.NavigateTo($"/{ParentPath}");
@@ -150,7 +150,7 @@ else {
 
         }
         else {
-            printer.Site = ParentPath;
+            printer.SiteId = int.Parse(ParentPath);
             printer = await printerData.UpdatePrinter(printer) ;
             
             if (printer != null) {

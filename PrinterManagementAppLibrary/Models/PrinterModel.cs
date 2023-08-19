@@ -38,8 +38,9 @@ namespace PrinterManagementAppLibrary.Models {
         public string Status { get; set ; } = "Offline";
         [NotMapped]
         public bool Editing { get; set; } = false;
-        [MaxLength(35)]
-        public string? Site { get; set; } 
+        public int SiteId { get; set; }
+        [ForeignKey("SiteId")]
+        public Site Site { get; set; }
 
     }
 }

@@ -18,7 +18,7 @@ else {
     private List<PrinterModel>? printers = new List<PrinterModel>();
     private string parentPath { get; set; } = "ClevelandToyota";
     protected override async Task OnInitializedAsync() {
-        printers = await printerData.GetClevelandToyotaPrinters();
+        printers = await printerData.GetClevelandPrinters();
 
     }
     protected override async Task OnAfterRenderAsync(bool firstRender) {

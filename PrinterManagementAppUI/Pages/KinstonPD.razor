@@ -20,7 +20,7 @@ else {
     private List<PrinterModel>? printers = new List<PrinterModel>();
 
     protected override async Task OnInitializedAsync() {
-        printers = await printerData.GetKinstonPDPrinters();
+        printers = await printerData.GetKinstonPrinters();
 
     }
     protected override async Task OnAfterRenderAsync(bool firstRender) {

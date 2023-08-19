@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.EntityFrameworkCore;
+using PrinterManagementAppLibrary.DataAccess.SQL;
 using PrinterManagementAppUI;
-
+//new
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container. seprate to  ConfigureService file
@@ -10,7 +12,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.ConfigureService();
 
 var app = builder.Build();
-
+//Setup inmemory database
+var scope = app.Services.CreateScope();
+var dbContext = scope.ServiceProvider.GetRequiredService<SQLDBContext>();
+dbContext.Database.EnsureDeleted();
+dbContext.Database.EnsureCreated();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment()) {
     app.UseExceptionHandler("/Error");
