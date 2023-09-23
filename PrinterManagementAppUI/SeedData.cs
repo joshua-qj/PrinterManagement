@@ -37,12 +37,12 @@ namespace PrinterManagementAppUI {
             PrinterModel printer = new PrinterModel {
                 Id = 1,
                 IP = "8.8.8.8",
-                Name = "STPMAN",
-                Model = "E60165",
+                Name = "Microsoft",
+                Model = "p60165",
                 MachineNo = "31258",
-                SerialNo = "CNMRPCL5J8",
-                Location = "SWT Parts Manager (Andrew)",
-                Department = "Parts SWT",
+                SerialNo = "CNMCL5J8",
+                Location = "Bill Gates",
+                Department = "arts ",
                 Manufacturer = "HP",
                 SiteId = 1
             };
@@ -50,11 +50,11 @@ namespace PrinterManagementAppUI {
             printer = new PrinterModel {
                 Id = 2,
                 IP = "172.16.1.1",
-                Name = "STPWAR",
-                Model = "E60165",
-                MachineNo = "31451",
-                SerialNo = "CNMKM7P2KF",
-                Location = " Clerk (Jack)",
+                Name = "Facebook",
+                Model = "E6065",
+                MachineNo = "3151",
+                SerialNo = "CNMKM7KF",
+                Location = " Mark Zuckerberg",
                 Department = "Service ",
                 Manufacturer = "HP",
                 SiteId = 1
@@ -63,12 +63,12 @@ namespace PrinterManagementAppUI {
              printer = new PrinterModel {
                 Id = 3,
                 IP = "127.0.0.1",
-                Name = "STADMIN2",
-                Model = "E60165",
-                MachineNo = "31450",
-                SerialNo = "CNMKMB3W",
-                Location = "Accounts Pay Mazda (Hei)",
-                Department = "Admin",
+                Name = "NVIDIA",
+                Model = "E6016",
+                MachineNo = "3450",
+                SerialNo = "CNMB3W",
+                Location = "Jensen Huang",
+                Department = "Huang",
                 Manufacturer = "HP",
                 SiteId = 2
             };
@@ -77,12 +77,12 @@ namespace PrinterManagementAppUI {
             printer = new PrinterModel {
                 Id = 4,
                 IP = "172.16.1.120",
-                Name = "PAY",
-                Model = "E6016",
-                MachineNo = "3147",
-                SerialNo = "CNMKM69ZV",
-                Location = "Accounts Pay (Sarah)",
-                Department = "Admin",
+                Name = "Amazon",
+                Model = "E60",
+                MachineNo = "317",
+                SerialNo = "CNMK9ZV",
+                Location = "Jeff Bezos",
+                Department = "Amazon",
                 Manufacturer = "HP",
                 SiteId = 2
             };
@@ -90,12 +90,12 @@ namespace PrinterManagementAppUI {
             printer = new PrinterModel {
                 Id = 5,
                 IP = "8.8.8.8",
-                Name = "ACC",
+                Name = "apple",
                 Model = "E6065",
                 MachineNo = "3146",
                 SerialNo = "CNMRCL540",
-                Location = "Accounts Rec (Lor)",
-                Department = "Admin",
+                Location = "apple",
+                Department = "apple",
                 Manufacturer = "HP",
                 SiteId = 3
             };
@@ -103,12 +103,12 @@ namespace PrinterManagementAppUI {
             printer = new PrinterModel {
                 Id = 6,
                 IP = "6.6.6.6",
-                Name = "STVEHRO",
+                Name = "google",
                 Model = "E6015",
                 MachineNo = "3166",
-                SerialNo = "CNMPCL5JT",
-                Location = "Clerk (Jik)",
-                Department = "New Cars ",
+                SerialNo = "Larry Page",
+                Location = "google",
+                Department = "google",
                 Manufacturer = "HP",
                 SiteId = 3
             };
@@ -121,7 +121,7 @@ namespace PrinterManagementAppUI {
                 Model = "E6015",
                 MachineNo = "31df66",
                 SerialNo = "CNMPCssL5JT",
-                Location = "Developer (Ji)",
+                Location = "HERO",
                 Department = "New",
                 Manufacturer = "HP",
                 SiteId = 4
@@ -131,11 +131,11 @@ namespace PrinterManagementAppUI {
             printer = new PrinterModel {
                 Id = 8,
                 IP = "7.7.7.7",
-                Name = "PA",
+                Name = "Linux ",
                 Model = "E606",
                 MachineNo = "31477",
                 SerialNo = "79ZV",
-                Location = "rahu",
+                Location = "Linus Torvalds",
                 Department = "Ad",
                 Manufacturer = "HP",
                 SiteId = 2
@@ -146,12 +146,12 @@ namespace PrinterManagementAppUI {
             printer = new PrinterModel {
                 Id =9 ,
                 IP = "8.8.8.8",
-                Name = "AY",
+                Name = "IBM",
                 Model = "16",
                 MachineNo = "37",
                 SerialNo = "CNM",
-                Location = "Acc",
-                Department = "Admin",
+                Location = "IBM",
+                Department = "IBM",
                 Manufacturer = "HP",
                 SiteId = 2
             };
@@ -160,12 +160,12 @@ namespace PrinterManagementAppUI {
             printer = new PrinterModel {
                 Id = 10,
                 IP = "9.9.9.9",
-                Name = "APAY",
+                Name = "APPLE",
                 Model = "E776016",
                 MachineNo = "3177747",
                 SerialNo = "C77ZV",
-                Location = "Pay (7)",
-                Department = "Adn",
+                Location = "Tim Cook",
+                Department = "APPLE",
                 Manufacturer = "HP",
                 SiteId = 3
             };
