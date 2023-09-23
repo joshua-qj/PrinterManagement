@@ -27,23 +27,6 @@ namespace PrinterManagementAppLibrary.DataAccess.SQL {
             var result = await _context.Printers.ToListAsync();
             return result;
         }
-        public async Task<List<PrinterModel>?> GetSpringwoodPrinters() {
-            var result = await _context.Printers.Where(p => p.SiteId == 1).ToListAsync();
-            return result;
-        }
-
-        public async Task<List<PrinterModel>?> GetClevelandPrinters() {
-            var result = await _context.Printers.Where(p => p.SiteId == 2).ToListAsync();
-            return result;
-        }
-        public async Task<List<PrinterModel>?> GetRedlandsPrinters() {
-            var result = await _context.Printers.Where(p => p.SiteId == 3).ToListAsync();
-            return result;
-        }
-        public async Task<List<PrinterModel>?> GetKinstonPrinters() {
-            var result = await _context.Printers.Where(p => p.SiteId == 4).ToListAsync();
-            return result;
-        }
 
 
         public async Task<PrinterModel?> GetPrinter(int id) {
@@ -93,6 +76,10 @@ namespace PrinterManagementAppLibrary.DataAccess.SQL {
                 }
             }
         }
-
+        public async Task<List<PrinterModel>?> GetPrintersBySiteId(int siteId) {
+            if (siteId== 0) { siteId = 1; }
+            var result = await _context.Printers.Where(p => p.SiteId == siteId).Include(p => p.Site).ToListAsync();
+            return result;
+        }
     }
 }

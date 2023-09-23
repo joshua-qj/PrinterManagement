@@ -1,5 +1,5 @@
-﻿@page "/printer/{ParentPath}/add"
-@page "/printer/{ParentPath}/{Id:int}"
+﻿@page "/printer/{ParentPath:int}/add"
+@page "/printer/{ParentPath:int}/{Id:int}"
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JSRuntime
 
@@ -102,7 +102,7 @@ else {
     [Parameter]
     public int Id { get; set; }
     [Parameter]
-    public string ParentPath { get; set; }
+    public int ParentPath { get; set; }
     PrinterModel printer= new PrinterModel();
     bool loading = true;
     string btnText = "";  //submit button's text
@@ -142,19 +142,19 @@ else {
 
     async void AddOrUpdatePrinter() {
         if (Id == 0) {
-            printer.SiteId =int.Parse(ParentPath);
+            printer.SiteId =ParentPath;
             var result = await printerData.CreatePrinter(printer); 
             if (result != null) {
-                NavigationManager.NavigateTo($"/{ParentPath}");
+                NavigationManager.NavigateTo($"/printers/{ParentPath}");
             }
 
         }
         else {
-            printer.SiteId = int.Parse(ParentPath);
+            printer.SiteId = ParentPath;
             printer = await printerData.UpdatePrinter(printer) ;
             
             if (printer != null) {
-                NavigationManager.NavigateTo($"/{ParentPath}", true);
+                NavigationManager.NavigateTo($"/printers/{ParentPath}", true);
                 //   forceLoad:
                 //     If true, bypasses client-side routing and forces the browser to load the new
                 //     page from the server, whether or not the URI would normally be handled by the
@@ -167,7 +167,7 @@ else {
         bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", $"Do you really want to delete '{printer.Name}' ?");
         if (confirmed) {
             await printerData.DeletePrinter(printer.Id);
-            NavigationManager.NavigateTo($"/{ ParentPath}");
+            NavigationManager.NavigateTo($"/printers/{ParentPath}");
            
         }
     }

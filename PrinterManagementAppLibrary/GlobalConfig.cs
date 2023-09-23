@@ -8,13 +8,10 @@ using System.Threading.Tasks;
 namespace PrinterManagementAppLibrary {
     public static class GlobalConfig {
 
-        public const string SpringwoodToyota = "SpringwoodToyota";
-        public const string SpringwoodMazdaSales = "SpringwoodMazdaSales";
-        public const string SpringwoodMazdaServices = "SpringwoodMazdaServices";
-        public const string ClevelandToyota = "ClevelandToyota";
-        public const string ClevelandMG = "ClevelandMG";
-        public const string RedlandsMazda = "RedlandsMazda";
-        public const string KinstonPD = "KinstonPD";
+        public const string GoldCoast = "GoldCoast";
+        public const string Cleveland = "Cleveland";
+        public const string Brisbane = "Brisbane";
+        public const string Sydney = "Sydney";
 
 
     }

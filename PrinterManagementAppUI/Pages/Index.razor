@@ -1,14 +1,15 @@
 ﻿@page "/"
-@page "/SpringwoodToyota"
+@page "/printers/{parentPath:int}"
+
 @using System.Net.NetworkInformation
 @inject IPrinterData printerData
 
-<PageTitle>Springwood Toyota Printer</PageTitle>
+<PageTitle>@SiteName</PageTitle>
 
-<h1>Springwood Toyota Printer</h1>
+<h1>@SiteName Printers list</h1>
 @if (printers is not null) {
     <CascadingValue Name="ParentPath" Value="@parentPath">
-    <PrinterList Items= "printers" ColumsToExclude="Id,Editing,Site"></PrinterList>
+    <PrinterList Items= "printers" ColumsToExclude="Id,Editing,SiteId"></PrinterList>
         </CascadingValue>
 }
 else {
@@ -17,16 +18,21 @@ else {
 
 @code{
     private List<PrinterModel>? printers=new List<PrinterModel>();
-    private string parentPath { get; set; } = "SpringwoodToyota";
+    [Parameter]
+    public int parentPath { get; set; } 
+    public string SiteName = string.Empty;
     protected override async Task OnInitializedAsync() {
-        printers=  await printerData.GetSpringwoodPrinters();
-
+        printers = await printerData.GetPrintersBySiteId(parentPath);
+    }
+    protected override async void OnParametersSet() {
+        printers = await printerData.GetPrintersBySiteId(parentPath);
+        SiteName = printers.FirstOrDefault().Site?.Name;
+        StateHasChanged();
     }
     protected override async Task OnAfterRenderAsync(bool firstRender) {
         //
         await printerData.PingPrinters(printers);
         StateHasChanged();
-        //return base.OnAfterRenderAsync(firstRender);
     }
 
 

@@ -21,7 +21,7 @@ namespace PrinterManagementAppLibrary.DataAccess.SQL {
         protected override void OnModelCreating(ModelBuilder modelBuilder) {     //Add Product Categories
             modelBuilder.Entity<Site>().HasData(new Site {
                 Id = 1,
-                Name = "Springwood",
+                Name = "GoldCoast",
                 IconCSS = "fas fa-spa"
             });
             modelBuilder.Entity<Site>().HasData(new Site {
@@ -31,12 +31,12 @@ namespace PrinterManagementAppLibrary.DataAccess.SQL {
             });
             modelBuilder.Entity<Site>().HasData(new Site {
                 Id = 3,
-                Name = "Redlands",
+                Name = "Brisbane",
                 IconCSS = "fas fa-headphones"
             });
             modelBuilder.Entity<Site>().HasData(new Site {
                 Id =4 ,
-                Name = "Kingston",
+                Name = "Sydney",
                 IconCSS = "fas fa-headphones"
             });
             modelBuilder.Entity<PrinterModel>().HasData(

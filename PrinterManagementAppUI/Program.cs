@@ -7,16 +7,10 @@ using PrinterManagementAppUI;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container. seprate to  ConfigureService file
-
-
 builder.ConfigureService();
 
 var app = builder.Build();
-//Setup inmemory database
-var scope = app.Services.CreateScope();
-var dbContext = scope.ServiceProvider.GetRequiredService<SQLDBContext>();
-dbContext.Database.EnsureDeleted();
-dbContext.Database.EnsureCreated();
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment()) {
     app.UseExceptionHandler("/Error");

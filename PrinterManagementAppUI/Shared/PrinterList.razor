@@ -61,7 +61,7 @@
     [Parameter]
     public string ColumsToExclude { get; set; }
     [CascadingParameter(Name = "ParentPath")]
-    private string parentPath { get; set; }
+    private int parentPath { get; set; }
 
 
     MemberInfo[] memberInfo;

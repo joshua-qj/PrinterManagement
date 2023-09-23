@@ -87,7 +87,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STPMAN",
                             SerialNo = "CNMRPCL5J8",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -100,7 +100,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STPWAR",
                             SerialNo = "CNMKM7P2KF",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -113,7 +113,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STADMIN2",
                             SerialNo = "CNMKM6RB3W",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -126,7 +126,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "ACCPAY",
                             SerialNo = "CNMKM6R9ZV",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -139,7 +139,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "ACCREC",
                             SerialNo = "CNMRPCL540",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -152,7 +152,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STVEHPRO",
                             SerialNo = "CNMRPCL5JT",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -165,7 +165,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STFLEET2",
                             SerialNo = "CNMRPCL5K4",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -178,7 +178,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STFMAN",
                             SerialNo = "CNMRPCL5KN",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -191,7 +191,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STSTOCK2",
                             SerialNo = "CNMRPCL5L1",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -204,7 +204,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "HRMAN",
                             SerialNo = "CNMRPCL5M1",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -217,7 +217,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STOM",
                             SerialNo = "CNMRPCL5MM",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -230,7 +230,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E55040",
                             Name = "STACC2",
                             SerialNo = "JPBRP8F323",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -243,7 +243,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E55040",
                             Name = "STUSEDCOLOUR",
                             SerialNo = "JPBRP8F329",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -256,7 +256,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "8500FN2",
                             Name = "STSCANNER",
                             SerialNo = "CN7B713024",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -269,7 +269,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "SMOFFMAN",
                             SerialNo = "CNMRPCL5N5",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -282,7 +282,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STFLEETBM",
                             SerialNo = "CNMRPCL4SN",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -295,7 +295,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STFLEET3",
                             SerialNo = "CNMRPCL4T6",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -308,7 +308,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "SWPAY",
                             SerialNo = "CNMRPCL5Y5",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -321,7 +321,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STSAM",
                             SerialNo = "CNMRPCL6CM",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -334,7 +334,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E77822",
                             Name = "STRECEPTION2",
                             SerialNo = "CND1N64020",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -347,7 +347,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E77830",
                             Name = "STACOPIER",
                             SerialNo = "CNB8K7R26G",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -360,7 +360,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60155",
                             Name = "STUTECH",
                             SerialNo = "CNMRPCL6DJ",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -373,7 +373,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60155",
                             Name = "STWSALE",
                             SerialNo = "CNMRPCL6B7",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -386,7 +386,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "IT",
                             SerialNo = "CNMRPCL6C8",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -399,7 +399,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E78325",
                             Name = "ITCOPIER",
                             SerialNo = "CNB1P3Q1CQ",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -412,7 +412,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E77830",
                             Name = "STRECEPTION",
                             SerialNo = "CNB8K7R26M",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -425,7 +425,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E55040",
                             Name = "FINCON",
                             SerialNo = "JPBRP8F33W",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -438,7 +438,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E77830",
                             Name = "STBM2COPIER",
                             SerialNo = "CNB8K7R26W",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -451,7 +451,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E87650",
                             Name = "STPCOPIER",
                             SerialNo = "CNB8K2S0LB",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -464,7 +464,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E77822",
                             Name = "STSCOPIER",
                             SerialNo = "CND1N64023",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -477,7 +477,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E77822",
                             Name = "STUSEDCOPIER",
                             SerialNo = "CND1N6702Q",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -490,7 +490,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E78330",
                             Name = "STBM1COPIER",
                             SerialNo = "CNB1P960G1",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -503,7 +503,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E78330",
                             Name = "STFXDOPCOPIER",
                             SerialNo = "CNB1P960G2",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -516,7 +516,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STFLEET",
                             SerialNo = "CNMRPCL68G",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -529,7 +529,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E55040",
                             Name = "STACC3",
                             SerialNo = "JPBRP8F31N",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -542,7 +542,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STSRO",
                             SerialNo = "CNMRPCL699",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -555,7 +555,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STPARTS",
                             SerialNo = "CNMRPCL68P",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -568,7 +568,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STSINV",
                             SerialNo = "CNMRPCL624",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -581,7 +581,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STNEW",
                             SerialNo = "CNMRPCL6D4",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -594,7 +594,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STPINV",
                             SerialNo = "CNMRPCL67F",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -607,7 +607,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STUSED",
                             SerialNo = "CNMRPCL6BJ",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -620,7 +620,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E78325",
                             Name = "PAYCOPYA3",
                             SerialNo = "CNB1P3Q1DB",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -633,7 +633,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "SWAFTM",
                             SerialNo = "CNMRPCL754",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -646,7 +646,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STADMIN",
                             SerialNo = "CNMRPCL75C",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -659,7 +659,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "P3045DN",
                             Name = "SWPICK",
                             SerialNo = "VM59206607",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -672,7 +672,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "ZT410",
                             Name = "####",
                             SerialNo = "18J155301053",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -685,7 +685,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "ZT410",
                             Name = "####",
                             SerialNo = "18J170405949",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -698,7 +698,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STSADM1",
                             SerialNo = "CNMRPCL75N",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -711,7 +711,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E52645",
                             Name = "STFIMAN",
                             SerialNo = "####",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -724,7 +724,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E57540",
                             Name = "STGOPA",
                             SerialNo = "CNBRPCJ4XP",
-                            Site = "SpringwoodToyota"
+                            Site = "GoldCoast"
                         },
                         new
                         {
@@ -1036,7 +1036,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "CTRECEPTION",
                             SerialNo = "CNMRPCL77C",
-                            Site = "ClevelandToyota"
+                            Site = "Cleveland"
                         },
                         new
                         {
@@ -1049,7 +1049,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "CTWAR",
                             SerialNo = "CNMRPCL5HD",
-                            Site = "ClevelandToyota"
+                            Site = "Cleveland"
                         },
                         new
                         {
@@ -1062,7 +1062,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E87650",
                             Name = "CTBM1",
                             SerialNo = "CNB8K2S0LH",
-                            Site = "ClevelandToyota"
+                            Site = "Cleveland"
                         },
                         new
                         {
@@ -1075,7 +1075,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E78325",
                             Name = "CTNCOPIER",
                             SerialNo = "CNB1P3Q1F5",
-                            Site = "ClevelandToyota"
+                            Site = "Cleveland"
                         },
                         new
                         {
@@ -1088,7 +1088,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E78325",
                             Name = "CTSCOPIER",
                             SerialNo = "CNB1P3Q1F9",
-                            Site = "ClevelandToyota"
+                            Site = "Cleveland"
                         },
                         new
                         {
@@ -1101,7 +1101,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E55040",
                             Name = "CTFLEET",
                             SerialNo = "JPBRP8F34H",
-                            Site = "ClevelandToyota"
+                            Site = "Cleveland"
                         },
                         new
                         {
@@ -1114,7 +1114,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E78325",
                             Name = "CTBM2",
                             SerialNo = "CNB1P3Q1FC",
-                            Site = "ClevelandToyota"
+                            Site = "Cleveland"
                         },
                         new
                         {
@@ -1127,7 +1127,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "CTSRO",
                             SerialNo = "CNMRPCL5J2",
-                            Site = "ClevelandToyota"
+                            Site = "Cleveland"
                         },
                         new
                         {
@@ -1140,7 +1140,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "CTSINV",
                             SerialNo = "CNMRPCL5H2",
-                            Site = "ClevelandToyota"
+                            Site = "Cleveland"
                         },
                         new
                         {
@@ -1153,7 +1153,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "CTNEW	",
                             SerialNo = "CNMRPCL5GS",
-                            Site = "ClevelandToyota"
+                            Site = "Cleveland"
                         },
                         new
                         {
@@ -1166,7 +1166,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "CTPINV",
                             SerialNo = "CNMRPCL5FF",
-                            Site = "ClevelandToyota"
+                            Site = "Cleveland"
                         },
                         new
                         {
@@ -1179,7 +1179,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "CTPWHSE",
                             SerialNo = "CNMRPCL562",
-                            Site = "ClevelandToyota"
+                            Site = "Cleveland"
                         },
                         new
                         {
@@ -1192,7 +1192,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E57540",
                             Name = "RMGM",
                             SerialNo = "CNBRPCJ5D7",
-                            Site = "RedlandsMazda"
+                            Site = "Brisbane"
                         },
                         new
                         {
@@ -1205,7 +1205,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "RMNEW",
                             SerialNo = "CNMRPCL5WC",
-                            Site = "RedlandsMazda"
+                            Site = "Brisbane"
                         },
                         new
                         {
@@ -1218,7 +1218,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E87650",
                             Name = "RMRECEPTION",
                             SerialNo = "CNB8K6M0G1",
-                            Site = "RedlandsMazda"
+                            Site = "Brisbane"
                         },
                         new
                         {
@@ -1231,7 +1231,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E77822",
                             Name = "RMBM1",
                             SerialNo = "CND1N6B01L",
-                            Site = "RedlandsMazda"
+                            Site = "Brisbane"
                         },
                         new
                         {
@@ -1244,7 +1244,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E78330",
                             Name = "RMBM2",
                             SerialNo = "CNB1P960G3",
-                            Site = "RedlandsMazda"
+                            Site = "Brisbane"
                         },
                         new
                         {
@@ -1257,7 +1257,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60155",
                             Name = "RMAFT",
                             SerialNo = "CNMKM6R9X7",
-                            Site = "RedlandsMazda"
+                            Site = "Brisbane"
                         },
                         new
                         {
@@ -1270,7 +1270,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "P3045dn",
                             Name = "RMSRO",
                             SerialNo = "####",
-                            Site = "RedlandsMazda"
+                            Site = "Brisbane"
                         },
                         new
                         {
@@ -1283,7 +1283,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E78330",
                             Name = "RMSINV",
                             SerialNo = "CNB1P960G9",
-                            Site = "RedlandsMazda"
+                            Site = "Brisbane"
                         },
                         new
                         {
@@ -1296,7 +1296,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "RMPARTS",
                             SerialNo = "CNMRPCL5ZJ",
-                            Site = "RedlandsMazda"
+                            Site = "Brisbane"
                         },
                         new
                         {
@@ -1309,7 +1309,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60155",
                             Name = "RMWAR",
                             SerialNo = "CNMKM6K4PY",
-                            Site = "RedlandsMazda"
+                            Site = "Brisbane"
                         },
                         new
                         {
@@ -1322,7 +1322,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E55040",
                             Name = "RMSMAN",
                             SerialNo = "JPBRP6807D",
-                            Site = "RedlandsMazda"
+                            Site = "Brisbane"
                         },
                         new
                         {
@@ -1335,7 +1335,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "RMNSMAN",
                             SerialNo = "CNMRPCL5Z5",
-                            Site = "RedlandsMazda"
+                            Site = "Brisbane"
                         },
                         new
                         {
@@ -1348,7 +1348,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STPDO",
                             SerialNo = "CNMRPCL54C",
-                            Site = "KinstonPD"
+                            Site = "Sydney"
                         },
                         new
                         {
@@ -1361,7 +1361,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "ZM400",
                             Name = "####",
                             SerialNo = "####",
-                            Site = "KinstonPD"
+                            Site = "Sydney"
                         },
                         new
                         {
@@ -1374,7 +1374,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E60165",
                             Name = "STREGO",
                             SerialNo = "CNMRPCL54P",
-                            Site = "KinstonPD"
+                            Site = "Sydney"
                         },
                         new
                         {
@@ -1387,7 +1387,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "P3045DN",
                             Name = "SMREGO",
                             SerialNo = "####",
-                            Site = "KinstonPD"
+                            Site = "Sydney"
                         },
                         new
                         {
@@ -1400,7 +1400,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "E77830",
                             Name = "PDCOPIER",
                             SerialNo = "####",
-                            Site = "KinstonPD"
+                            Site = "Sydney"
                         },
                         new
                         {
@@ -1413,7 +1413,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "M1145",
                             Name = "PDGATE",
                             SerialNo = "####",
-                            Site = "KinstonPD"
+                            Site = "Sydney"
                         },
                         new
                         {
@@ -1426,7 +1426,7 @@ namespace PrinterManagementAppLibrary.Migrations
                             Model = "M1145",
                             Name = "PDPTS",
                             SerialNo = "####",
-                            Site = "KinstonPD"
+                            Site = "Sydney"
                         });
                 });
 #pragma warning restore 612, 618
