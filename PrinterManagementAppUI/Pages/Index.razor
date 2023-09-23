@@ -18,17 +18,28 @@ else {
 
 @code{
     private List<PrinterModel>? printers=new List<PrinterModel>();
+
     [Parameter]
     public int parentPath { get; set; } 
     public string SiteName = string.Empty;
+
     protected override async Task OnInitializedAsync() {
-        printers = await printerData.GetPrintersBySiteId(parentPath);
+        printers = await printerData?.GetPrintersBySiteId(parentPath);
     }
+
     protected override async void OnParametersSet() {
-        printers = await printerData.GetPrintersBySiteId(parentPath);
-        SiteName = printers.FirstOrDefault().Site?.Name;
-        StateHasChanged();
+        printers = await printerData?.GetPrintersBySiteId(parentPath);
+        if (printers is not null&&printers.Count()!=0) {
+            SiteName = printers.FirstOrDefault().Site?.Name;
+            StateHasChanged();
+        }else {
+            SiteName = "No";
+            printers.Add(new PrinterModel());
+            StateHasChanged();
+        }
+
     }
+
     protected override async Task OnAfterRenderAsync(bool firstRender) {
         //
         await printerData.PingPrinters(printers);

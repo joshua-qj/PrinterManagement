@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.ConfigureService();
 
 var app = builder.Build();
-
+SeedData.AddInMemoryData(app);
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment()) {
     app.UseExceptionHandler("/Error");
