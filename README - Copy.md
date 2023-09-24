@@ -1,2 +1,0 @@
-# PrinterManagement
-Printer Management
