@@ -11,7 +11,9 @@ Blazor serverside runtime,
 SQL Server.
 
 Note:
+SQL Inmemory was used in this branch.
 Using @typeparam to create generic component, which is PrinterList.rzor.
-Using Reflection
+Using Reflection to get properties and values.
+Using Cascading parameters to pass a value from a component to all its descendants.
 
-depict DataGrid CRUD operation in SQL server database using Entity Framework core and Web API in a Blazor serverside application.
+
