@@ -15,3 +15,5 @@ SQL localdb was used in this branch.
 Using @typeparam to create generic component, which is PrinterList.rzor.
 Using Reflection to get properties and values.
 Using Cascading parameters to pass a value from a component to all its descendants.
+
+Code was deployed to Azure web app for demo purpose, Url is https://printermanagement2023.azurewebsites.net/
